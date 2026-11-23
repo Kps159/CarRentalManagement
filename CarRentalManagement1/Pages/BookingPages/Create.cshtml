@@ -1,0 +1,69 @@
+@page
+@model CarRentalManagement1.Pages.BookingPages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Booking</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Booking.DateOut" class="control-label"></label>
+                <input asp-for="Booking.DateOut" class="form-control" />
+                <span asp-validation-for="Booking.DateOut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.DateIn" class="control-label"></label>
+                <input asp-for="Booking.DateIn" class="form-control" />
+                <span asp-validation-for="Booking.DateIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.VehicleId" class="control-label"></label>
+                <input asp-for="Booking.VehicleId" class="form-control" />
+                <span asp-validation-for="Booking.VehicleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.CustomerId" class="control-label"></label>
+                <input asp-for="Booking.CustomerId" class="form-control" />
+                <span asp-validation-for="Booking.CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.DateCreated" class="control-label"></label>
+                <input asp-for="Booking.DateCreated" class="form-control" />
+                <span asp-validation-for="Booking.DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.DateUpdated" class="control-label"></label>
+                <input asp-for="Booking.DateUpdated" class="form-control" />
+                <span asp-validation-for="Booking.DateUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.Createdby" class="control-label"></label>
+                <input asp-for="Booking.Createdby" class="form-control" />
+                <span asp-validation-for="Booking.Createdby" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.Updatedby" class="control-label"></label>
+                <input asp-for="Booking.Updatedby" class="form-control" />
+                <span asp-validation-for="Booking.Updatedby" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
